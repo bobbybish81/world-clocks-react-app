@@ -1,0 +1,29 @@
+.clock-container {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid black;
+  border-radius: 0.5rem;
+  background-color: #c5d69a;
+  margin-top: 1rem;
+}
+
+.time {
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.city, .date {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+  @media screen and (min-width: 768px) {
+    .clock-container {
+      width: 49%;
+    }
+  }
