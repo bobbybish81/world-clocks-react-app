@@ -8,8 +8,9 @@ const timezones = ['Europe/London', 'Europe/Paris', 'Europe/Stockholm', 'Europe/
 const format = {month: 'long', day: 'numeric', year: 'numeric'};
 
 return <div className='board-container'>
-{timezones.map(timezone => 
+{timezones.map((timezone, index) => 
   <Clock 
+      key={index}
       date={date.toLocaleString(format)}
       time={time.setZone(timezone).toLocaleString(DateTime.TIME_WITH_SECONDS)}
       city={timezone.split('/')[1].replace(/_/g, ' ')}
@@ -17,3 +18,5 @@ return <div className='board-container'>
 )} </div>
 
 };
+
+
